@@ -30,7 +30,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginButton">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -86,11 +86,11 @@
                 <div class="col-12 col-sm align-self-center">
                     <img src="img/logo.png" class="img-fluid">
                 </div>
-                <div class="col-12 col-sm align-self-center">
+                <div class="col-12 col-sm  text-center align-self-center">
                     <!-- Added a tooltip in the below tag
                     <a role="button" class="btn btn-warning nav-link btn-block" data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+852 12345678</strong>" data-placement="bottom" href="#reservetable">Reserve Table</a> -->
                     <!--Reserve table mondal-->
-                    <a role="button" class="btn btn-warning nav-link btn-block" data-toggle="modal" data-target="#reservetableModal">Reserve Table</a>
+                    <button type="button" class="btn btn-warning nav-link btn-block" id="reservetableButton">Reserve Table</button>
 
                     <!--From coursera:-->
                     <!-- <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>" data-placement="bottom" href="#reservetable">Reserve Table</a> -->
@@ -390,7 +390,9 @@
 
     <script>
         $(document).ready(function() {
-            $('#mycarousel').carousel( { interval: 2000 } );
+            $('#mycarousel').carousel( { 
+                interval: 2000 
+            } );
             $('#carouselButton').click(function() {
                 if ($('#carouselButton').children('span').hasClass('fa-pause')) {
                     $('#mycarousel').carousel('pause');
@@ -402,6 +404,12 @@
                     $('#carouselButton').children('span').removeClass('fa-play');
                     $('#carouselButton').children('span').addClass('fa-pause');
                 }
+            });
+            $('#loginButton').click(function() {
+                $('#loginModal').modal('show');
+            });
+            $('#reservetableButton').click(function() {
+                $('#reservetableModal').modal('show');
             });
         });
     </script>
