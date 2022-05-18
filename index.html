@@ -87,15 +87,85 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <!--Added a tooltip in the below tag-->
-                    <a role="button" class="btn btn-warning nav-link btn-block" data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+852 12345678</strong>" data-placement="bottom" href="#reservetable">Reserve Table</a>
-                    
+                    <!-- Added a tooltip in the below tag
+                    <a role="button" class="btn btn-warning nav-link btn-block" data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+852 12345678</strong>" data-placement="bottom" href="#reservetable">Reserve Table</a> -->
+                    <!--Reserve table mondal-->
+                    <a role="button" class="btn btn-warning nav-link btn-block" data-toggle="modal" data-target="#reservetableModal">Reserve Table</a>
+
                     <!--From coursera:-->
                     <!-- <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>" data-placement="bottom" href="#reservetable">Reserve Table</a> -->
                 </div>
             </div>
         </div>
     </header>
+
+    <!--Modal for reserve table, Assignment 3 task 1:-->
+    <div id="reservetableModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a Table </h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="reservetable">
+                        <div class="form-group row align-items-center container">
+                            <label for="numofguest" class="col-lg-2 col-md-3 col-form-label">Number of Guests</label>
+                            <div class="col-md-9">
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" name="numofguest" id="numofguest1" value="option1">
+                                    <label class="form-check-label" for="numofguest1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" name="numofguest" id="numofguest2" value="option2">
+                                    <label class="form-check-label" for="numofguest2">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" name="numofguest" id="numofguest3" value="option3">
+                                    <label class="form-check-label" for="numofguest3">3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" name="numofguest" id="numofguest4" value="option4">
+                                    <label class="form-check-label" for="numofguest4">4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" name="numofguest" id="numofguest5" value="option5">
+                                    <label class="form-check-label" for="numofguest5">5</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" name="numofguest" id="numofguest6" value="option6">
+                                    <label class="form-check-label" for="numofguest6">6</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row container">
+                            <label for="datetime" class="col-12 col-md-2 col-form-label">Date and Time</label>
+                            <div class="col-md-5 col-sm-12">
+                                <input type="text" class="form-control" id="date" name="date" placeholder="Date">
+                            </div>
+                            <div class="col-md-5 col-sm-12">
+                                <input type="text" class="form-control" id="time" name="time" placeholder="Time">
+                            </div>
+                        </div>
+
+                        <div class="form-goup row container">
+                            <div class="offset-md-2 col-md-10">
+                                <button type="submit" class="btn btn-secondary">
+                                    Cancel
+                                </button>
+                                <button type="submit" class="btn btn-primary">
+                                    Reserve
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <div class="row row-content">
@@ -187,7 +257,7 @@
             </div>
         </div>
 
-        <!-- Task 1 = adding a reservation table-->
+        <!-- Assignment Task 1 = adding a reservation table
         <div class="row row-content justify-content-center" id="reservetable">
             <div class="col col-sm-8 align-self-center">
                 <div class="card">
@@ -246,7 +316,7 @@
                 </div>
             </div>
             
-        </div>
+        </div> -->
     </div>
 
     <footer class="footer">
